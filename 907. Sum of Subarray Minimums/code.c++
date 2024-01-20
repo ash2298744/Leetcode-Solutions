@@ -9,14 +9,22 @@ public:
         stack<int> s1, s2;
 
         for(int i = n - 1; i >= 0; i--){
-            while(!s1.empty() && arr[i] <= arr[s1.top()]) s1.pop();
-            if(!s1.empty()) nse[i] = s1.top();
+            while(!s1.empty() && arr[i] <= arr[s1.top()])
+                s1.pop();
+            
+            if(!s1.empty()) 
+                nse[i] = s1.top();
+
             s1.push(i);
         }
 
         for(int i = 0; i < n; i++){
-            while(!s2.empty() && arr[i] < arr[s2.top()]) s2.pop();
-            if(!s2.empty()) pge[i] = s2.top();
+            while(!s2.empty() && arr[i] < arr[s2.top()])
+                s2.pop();
+
+            if(!s2.empty()) 
+                pge[i] = s2.top();
+                
             s2.push(i);
         }
 
