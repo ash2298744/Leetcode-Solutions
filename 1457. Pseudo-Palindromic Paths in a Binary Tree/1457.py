@@ -1,5 +1,5 @@
 class Solution:
-    def pseudoPalindromicPaths (self, root) -> int:
+    def pseudoPalindromicPaths (self, root: Optional[TreeNode]) -> int:
         freq = [0 for i in range(9)]
         def dfs(node):
             if not node: 
