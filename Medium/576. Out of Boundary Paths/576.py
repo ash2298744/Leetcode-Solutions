@@ -2,7 +2,7 @@ class Solution:
     def findPaths(
         self, m: int, n: int, maxMove: int, startRow: int, startColumn: int) -> int:
         MOD = pow(10, 9) + 7
-        arr = [[1, 0], [0, 1], [-1, 0], [0, -1]]
+        dircn = [[1, 0], [0, 1], [-1, 0], [0, -1]]
         dp = [[[-1 for i in range(maxMove + 1)] for i in range(n)] for i in range(m)]
 
         def outOfBoundaryPaths(i, j, move):
@@ -10,7 +10,7 @@ class Solution:
                 return dp[i][j][move]
 
             cnt = 0
-            for k in arr:
+            for k in dircn:
                 if (move + 1) <= maxMove:
                     if (
                         (k[0] + i) >= 0
