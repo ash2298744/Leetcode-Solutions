@@ -5,7 +5,7 @@ class Solution:
         arr = [[1, 0], [0, 1], [-1, 0], [0, -1]]
         dp = [[[-1 for i in range(maxMove + 1)] for i in range(n)] for i in range(m)]
 
-        def f(i, j, move):
+        def outOfBoundaryPaths(i, j, move):
             if dp[i][j][move] != -1:
                 return dp[i][j][move]
 
@@ -18,11 +18,11 @@ class Solution:
                         and (k[0] + i) < m
                         and (k[1] + j) < n
                     ):
-                        cnt += f(i + k[0], j + k[1], move + 1)
+                        cnt += outOfBoundaryPaths(i + k[0], j + k[1], move + 1)
                     else:
                         cnt += 1
 
             dp[i][j][move] = cnt % MOD
             return cnt % MOD
 
-        return f(startRow, startColumn, 0)
+        return outOfBoundaryPaths(startRow, startColumn, 0)
