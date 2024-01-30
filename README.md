@@ -1,4 +1,4 @@
 # Competitive Programming
 Leetcode Solutions
 
-[Also, check out my leetcode profile](https://leetcode.com/jwseph/)
+[Also, check out my Leetcode profile](https://leetcode.com/jwseph/)
