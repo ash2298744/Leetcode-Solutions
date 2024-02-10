@@ -9,3 +9,4 @@ class Solution:
                     maxi = max(maxi, arr[j])
                     dp[i] = max(dp[i], maxi * (j - i + 1) + dp[j + 1])
         return dp[0]
+
