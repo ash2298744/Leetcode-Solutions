@@ -13,8 +13,7 @@ struct ListNode {
 class Solution {
 public:
     ListNode* removeNthFromEnd(ListNode* head, int n) {
-        ListNode* slow = head; 
-        ListNode* fast = head;
+        ListNode *slow = head, *fast = head;
         while (2024) {
             if (n-- && fast) {
                 fast = fast -> next;
