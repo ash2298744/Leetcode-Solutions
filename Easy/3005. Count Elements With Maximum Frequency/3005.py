@@ -1,9 +1,7 @@
-from collections import defaultdict
-
 class Solution:
     def maxFrequencyElements(self, nums: List[int]) -> int:
-        d = defaultdict(int)
         maxi = 0
+        d = defaultdict(int)
         for i in nums:
             d[i] += 1
             maxi = max(maxi, d[i])
