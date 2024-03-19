@@ -7,6 +7,7 @@ public:
         int res = 0;
         for(auto &i : nums) {
             int maxi = 0, num = i, len = 0, newNum = 0;
+            
             while(num) {
                 maxi = max(maxi, num % 10);
                 num /= 10;
