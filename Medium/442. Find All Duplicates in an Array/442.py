@@ -5,7 +5,7 @@ class Solution:
         for i in range(n):
             curr = nums[i] - 1
             want = i
-            while curr != (want) and (nums[curr] - 1) != curr:
+            while curr != want and (nums[curr] - 1) != curr:
                 nums[curr], nums[want] = nums[want], nums[curr]
                 curr = nums[i] - 1
                 want = i
