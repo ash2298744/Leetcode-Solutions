@@ -6,22 +6,16 @@ class Solution:
         dpR = [[0 for i in range(col)] for i in range(row)]
     
         for i in range(row):
-            cnt = 0
-            for j in range(col):
-                if matrix[i][j] == '0':
-                    cnt = 0
-                else:
-                    cnt += 1
-                    dpL[i][j] = cnt
+            dpL[i][0] = int(matrix[i][0])
+            for j in range(1, col):
+                if matrix[i][j] == '1':
+                    dpL[i][j] += dpL[i][j - 1] + 1
         
         for i in range(row):
-            cnt = 0
-            for j in range(col - 1, -1, -1):
-                if matrix[i][j] == '0':
-                    cnt = 0
-                else:
-                    cnt += 1
-                    dpR[i][j] = cnt
+            dpR[i][col - 1] = int(matrix[i][col - 1])
+            for j in range(col - 2, -1, -1):
+                if matrix[i][j] == '1':
+                    dpR[i][j] += dpR[i][j + 1] + 1
         
         maxArea = 0
         for i in range(row):
@@ -36,5 +30,3 @@ class Solution:
                     k += 1
                     b += 1   
         return maxArea
-
-          
