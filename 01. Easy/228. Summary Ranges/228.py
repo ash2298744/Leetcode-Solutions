@@ -20,5 +20,6 @@ class Solution:
 
             if j == n - 1:
                 res.append(str(nums[j]))
+                
         return res
                 
