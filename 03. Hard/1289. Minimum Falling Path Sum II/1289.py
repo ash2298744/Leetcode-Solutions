@@ -12,3 +12,4 @@ class Solution:
                     if j!=k:
                         dp[i][j]=min(dp[i][j],grid[i][j]+dp[i+1][k])
         return min(dp[0])
+    
