@@ -19,9 +19,9 @@ class Solution:
             "9" : ["0", "8"]
         }
         
-        q = deque([["0000", 0]])
-        while q:
-            state, turns = q.popleft()
+        dq = deque([["0000", 0]])
+        while dq:
+            state, turns = dq.popleft()
 
             if state == target:
                 return turns
@@ -30,5 +30,5 @@ class Solution:
                 for j in move[state[i]]:
                     if (state[:i] + j + state[i + 1:]) not in deadends:
                         deadends.add(state[:i] + j + state[i + 1:])
-                        q.append([state[:i] + j + state[i + 1:], turns + 1])
+                        dq.append([state[:i] + j + state[i + 1:], turns + 1])
         return -1
