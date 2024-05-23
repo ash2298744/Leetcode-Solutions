@@ -11,7 +11,7 @@ public:
         if(dp[i][have] != -1) return dp[i][have];
         int cnt = 0;
         cnt += solve(i + 1, have, dp, nums, k, n);
-        if(check(i, have, nums, k, n))  cnt = cnt + solve(i + 1, have | (1 << i), dp, nums, k, n);
+        if(check(i, have, nums, k, n))  cnt += solve(i + 1, have | (1 << i), dp, nums, k, n);
         return dp[i][have] = cnt;
     }
 
