@@ -8,6 +8,6 @@ class Solution:
         
         ans = odd = 0
         for i in d:
-            odd += d[i] % 2
+            odd |= d[i] % 2
             ans += d[i] - (d[i] % 2)
-        return ans + (odd != 0)
+        return ans + odd
