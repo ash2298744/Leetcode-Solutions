@@ -10,10 +10,4 @@ class Solution:
         for i in d:
             g = math.gcd(g, d[i])
 
-        if g == 1:
-            return False
-      
-        for i in d:
-            if d[i] % g != 0:
-                return False
-        return True
+        return g > 1

@@ -8,12 +8,6 @@ public:
         for(auto [k, v] : mp) {
             g = __gcd(g, v);
         }
-
-        if(g == 1) return false;
-
-        for(auto [k, v] : mp) {
-            if(v % g) return false;
-        }
-        return true;
+        return g > 1;
     }
 };
