@@ -5,18 +5,10 @@ public:
 
         vector<int> cnt(n + 1, 0);
         for(int i = 0; i < n - k + 1; i++) {
-            if(cnt[i] % 2) {
-                if(nums[i]) {
-                    cnt[i]++;
-                    cnt[i + k]--;
-                    res++;
-                }
-            } else {
-                if(!nums[i]) {
-                    cnt[i]++;
-                    cnt[i + k]--;
-                    res++;
-                }
+            if(cnt[i] % 2 == nums[i]) {
+                cnt[i]++;
+                cnt[i + k]--;
+                res++;
             }
             cnt[i + 1] += cnt[i];
         }
