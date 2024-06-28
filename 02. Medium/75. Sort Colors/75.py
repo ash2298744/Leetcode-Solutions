@@ -7,7 +7,7 @@ class Solution:
         for i in nums:
             if i == 0:
                 z += 1
-            elif i == 1:
+            if i == 1:
                 o += 1
         
         for i in range(len(nums)):
