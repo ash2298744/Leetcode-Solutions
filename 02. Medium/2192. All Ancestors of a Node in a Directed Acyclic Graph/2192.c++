@@ -18,8 +18,7 @@ public:
         for(int i = 0; i < n; i++) {
             set<int> nodesAncs;
             dfs(i, g, nodesAncs);
-            vector<int> curr(nodesAncs.begin(), nodesAncs.end());
-            ancs.push_back(curr);
+            ancs.push_back(vector<int>(nodesAncs.begin(), nodesAncs.end()));
         }
         return ancs;
     }
