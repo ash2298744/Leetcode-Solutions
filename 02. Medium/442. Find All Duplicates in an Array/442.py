@@ -10,7 +10,7 @@ class Solution:
                 curr = nums[i] - 1
                 want = i
 
-        ans = []
+        ans = [] # container for answer
         for i in range(n):
             if nums[i] != (i + 1):
                 ans.append(nums[i])
