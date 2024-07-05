@@ -29,5 +29,4 @@ class Solution:
         if first != last:
             return [mi, mx]
         return [-1, -1]
-        
-                
+             
